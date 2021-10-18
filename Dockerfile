@@ -5,3 +5,5 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/* 
 
 EXPOSE 53/udp
+
+ENTRYPOINT ["/usr/sbin/pdns_recursor"]
