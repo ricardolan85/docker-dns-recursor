@@ -8,7 +8,7 @@ ARG CONFIG=/etc/powerdns/recursor.conf
 
 RUN sed -i -E "s,(^local-address=)(.*),\10.0.0.0,g" $CONFIG
 RUN sed -i -E "s,(^# allow-from=)(.*),allow-from=,g" $CONFIG
-RUN sed -i -E "s,(^allow-from=)(.*),\1127.0.0.0/8\,138.94.52.0/22\,170.231.184.0/22,g" $CONFIG
+RUN sed -i -E "s,(^allow-from=)(.*),\1127.0.0.0/8\,138.94.52.0/22\,170.231.184.0/22,187.94.81.64/26,170.233.15.128/26,g" $CONFIG
 
 EXPOSE 53/udp
 
